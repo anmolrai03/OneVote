@@ -45,4 +45,4 @@ def contact_us(request):
             serializer.save()
             return Response({'status': 'success', 'message': 'Message sent successfully!'}, status=status.HTTP_201_CREATED)
         return Response({'status': 'error', 'message': 'Invalid data'}, status=status.HTTP_400_BAD_REQUEST)
-
+    
