@@ -54,7 +54,7 @@ The goal of this project is to demonstrate how modern web technologies can be us
 ---
 
 ## 🚀 Live Demo
-🔗 **Live Project:** [Click Here to View](<YOUR_DEPLOYED_LINK>)  
+🔗 **Live Project:** [Click Here to View](https://one-vote-khaki.vercel.app/) 
 🔗 **GitHub Repository:** [Click Here](<YOUR_GITHUB_LINK>)
 
 ---
@@ -82,7 +82,7 @@ OneVote/
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone <YOUR_REPO_LINK>
+git clone (https://github.com/anmolrai03/OneVote.git)
 cd OneVote
 ```
 
