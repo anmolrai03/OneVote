@@ -48,41 +48,21 @@ The goal of this project is to demonstrate how modern web technologies can be us
 - **Frontend:** React, Tailwind CSS (or your styling choice)
 - **Backend:** Django REST Framework
 - **Database:** SQLite / PostgreSQL (configurable)
-- **Deployment:** Deployed to `<YOUR_DEPLOYMENT_PLATFORM>`  
-  *(e.g., Render, Vercel, Railway, or your hosting platform)*
+- **Deployment:** Deployed to `Vercel`(frontend) and `Render`(backend).  
 
 ---
 
 ## 🚀 Live Demo
-🔗 **Live Project:** [Click Here to View](https://one-vote-khaki.vercel.app/) 
-🔗 **GitHub Repository:** [Click Here](<YOUR_GITHUB_LINK>)
+🔗 **Live Project:** [Click Here to View](https://one-vote-khaki.vercel.app/)
+🔗 **GitHub Repository:** [Click Here](https://github.com/anmolrai03/OneVote/tree/main)
 
----
-
-## 🗂️ Project Structure
-```
-OneVote/
-│
-├── backend/           # Django backend
-│   ├── manage.py
-│   ├── onevote_app/
-│   └── db.sqlite3
-│
-├── frontend/          # React frontend
-│   ├── src/
-│   ├── public/
-│   └── package.json
-│
-└── README.md
-```
-
----
+----
 
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone (https://github.com/anmolrai03/OneVote.git)
+git clone https://github.com/anmolrai03/OneVote.git
 cd OneVote
 ```
 
