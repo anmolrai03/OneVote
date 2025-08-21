@@ -1,0 +1,66 @@
+# ---- Python / Django ----
+__pycache__/
+*.py[cod]
+*.log
+*.pot
+*.pyc
+*.pyo
+*.env
+*.local
+*.db
+media/
+
+# Django database (uncomment if using SQLite and want to ignore it)
+# db.sqlite3
+
+# Virtual environment
+venv/
+env/
+env.bak/
+venv.bak/
+
+# Django migrations (except __init__.py)
+*/migrations/*.py
+*/migrations/*.pyc
+!*/migrations/__init__.py
+
+# ---- Node / React ----
+node_modules/
+dist/
+dist-ssr/
+*.local
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ---- IDEs & Editors ----
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ---- OS Files ----
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# ---- Jupyter ----
+.ipynb_checkpoints
+
+# ---- Coverage Reports ----
+htmlcov/
+.coverage
+.coverage.*
+
+# ---- Docker ----
+*.dockerignore
+Dockerfile
+docker-compose.yml
