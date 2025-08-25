@@ -1,9 +1,17 @@
-import { createBrowserRouter, createRoutesFromElements, Navigate, Route , RouterProvider } from 'react-router-dom'
-import {Home,About,User, Extra, Login, SignUp, Profile, Hero, Result} from './components'
-import Layout from './Layout'
-import Registeration from './components/Registeration/Registeration'
-import UserContextProvider from './context/UserContextProvider'
+/* eslint-disable no-unused-vars */
 
+// REACT IMPORTS
+import { createBrowserRouter, createRoutesFromElements, Navigate, Route } from 'react-router-dom'
+
+// COMPONENTS IMPORTS
+import UserContextProvider from './context/UserContextProvider'
+import Routes from './Routes'
+
+// import {Home,About,User, Extra, Login, SignUp, Profile, Hero, Result} from './components'
+// import Layout from './Layout'
+// import Registeration from './components/Registeration/Registeration'
+
+/*
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -24,7 +32,7 @@ const router = createBrowserRouter(
     
   )
 )
-
+*/
 
 
 // const router = createBrowserRouter(
@@ -70,7 +78,7 @@ function App() {
 
   return (
     <UserContextProvider>
-      <RouterProvider router={router} />
+      <Routes />
     </UserContextProvider>
   )
 }

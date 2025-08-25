@@ -6,7 +6,7 @@ import PasswordInput from "../Registeration/PasswordInput/PasswordInput";
 import Registeration from "../Registeration/Registeration";
 import FaceCaptureModal from "../Modal/FaceCaptureModal";
 import {Modal} from '../index'
-import Contact from "../Footer/Contact";
+// import Contact from "../Footer/Contact";
 
 function User(){
     const {userId} = useParams();

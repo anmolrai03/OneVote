@@ -1,83 +1,58 @@
 @import "tailwindcss";
-/* 
- @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Play:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); */
 
- /*
-*{
-    font-family: "Ubuntu", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-} */
+@layer theme {
+  :root {
+    /* === Colors (Innovative + Trustworthy) === */
+    --color-primary: oklch(65% 0.2 270); /* Sleek Violet-Blue */
+    --color-primary-hover: oklch(55% 0.2 270);
+    --color-secondary: oklch(75% 0.1 200); /* Soft Blue */
+    --color-accent: oklch(80% 0.15 150); /* Greenish Accent (trust/security) */
+    --color-background: oklch(98% 0.02 250); /* Near White */
+    --color-text: oklch(20% 0.02 250); /* Neutral Dark */
+    --color-muted: oklch(60% 0.05 250); /* Muted Gray */
+    --color-danger: oklch(60% 0.2 30); /* Modern Red for errors */
 
-/* @layer base{
-    .ubuntu-light {
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-      }
-      
-      .ubuntu-regular {
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-      
-      .ubuntu-medium {
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-      }
-      
-      .ubuntu-bold {
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-      }
-      
-      .ubuntu-light-italic {
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 300;
-        font-style: italic;
-      }
-      
-      .ubuntu-regular-italic {
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 400;
-        font-style: italic;
-      }
-      
-      .ubuntu-medium-italic {
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 500;
-        font-style: italic;
-      }
-      
-      .ubuntu-bold-italic {
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 700;
-        font-style: italic;
-      }
-} */
+    /* === Font System === */
+    --font-sans: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+    --font-display: 'Poppins', 'Inter', sans-serif;
 
-@keyframes slideIn {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
+    /* === Spacing / Radii / Shadows === */
+    --radius-lg: 1rem;
+    --radius-xl: 2rem;
+    --shadow-soft: 0 4px 12px oklch(0.2 0.05 250 / 0.15);
+    --shadow-strong: 0 6px 20px oklch(0.2 0.05 250 / 0.25);
   }
 }
-/* .play-regular {
-    font-family: "Play", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+
+@layer components {
+  .btn-primary {
+    border-radius: var(--radius-xl);
+    background-color: var(--color-primary);
+    padding-inline: 1.5rem;
+    padding-block: 0.75rem;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    color: white;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.2s ease-in-out;
   }
-  
-  .play-bold {
-    font-family: "Play", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  } */
+  .btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    box-shadow: var(--shadow-strong);
+  }
 
-
-
+  .btn-secondary {
+    border-radius: var(--radius-lg);
+    background-color: var(--color-secondary);
+    padding-inline: 1.25rem;
+    padding-block: 0.5rem;
+    font-weight: 500;
+    font-family: var(--font-sans);
+    color: white;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.2s ease-in-out;
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-accent);
+  }
+}

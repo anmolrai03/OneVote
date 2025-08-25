@@ -4,7 +4,7 @@ import { useNavigate , Link } from 'react-router-dom';
 import Modal from '../../Modal/Modal';
 import FaceCaptureModal from '../../Modal/FaceCaptureModal';
 import { apiUrl } from '../..';
-import Tooltip from '../../Footer/Tooltip';
+// import Tooltip from '../../Footer/Tooltip';
 
 function SignUp({toggleComponent}) {
 
