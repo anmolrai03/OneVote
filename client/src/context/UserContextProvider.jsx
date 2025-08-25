@@ -1,19 +1,21 @@
 import UserContext from "./UserContext";
 import { useContext , useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
 const UserContextProvider = ({children}) => {
+    
     const [user , setUser] = useState( ()=> {
-        const storedUser = localStorage.getItem('user');
+        const storedUser = sessionStorage.getItem('user');
         return storedUser ? JSON.parse(storedUser) : {}
     })
     const [isLoggedIn , setIsLoggedIn] = useState( () => {
-        const storedLoggedIn = localStorage.getItem('isLoggedIn')
+        const storedLoggedIn = sessionStorage.getItem('isLoggedIn')
         return storedLoggedIn === 'true'
     })
 
     useEffect( ()=> {
-        localStorage.setItem('user' , JSON.stringify(user))
-        localStorage.setItem('isLoggedIn' , isLoggedIn)
+        sessionStorage.setItem('user' , JSON.stringify(user))
+        sessionStorage.setItem('isLoggedIn' , isLoggedIn)
     } , [user , isLoggedIn])
 
     return(
@@ -23,4 +25,12 @@ const UserContextProvider = ({children}) => {
     )
 }
 
-export default UserContextProvider;
+function useUser() {
+    return useContext(UserContext);
+}
+
+UserContextProvider.propTypes = {
+    children: PropTypes.node.isRequired
+};
+
+export {UserContextProvider , useUser};
