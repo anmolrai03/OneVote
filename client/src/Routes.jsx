@@ -7,6 +7,7 @@ import { Route , RouterProvider , createBrowserRouter, createRoutesFromElements 
 import Layout from './Layout';
 import LoadingPage from './Pages/LoadingPage/LoadingPage'
 import Hero from './Pages/Hero/Hero';
+import AuthPage from './Pages/AuthPage/AuthPage';
 
 
 // LAZY LOAD THE PAGES
@@ -20,7 +21,7 @@ function Routes() {
     createRoutesFromElements(
       <>
         <Route path='/app' element={ <Layout /> }> 
-
+          
         </Route>,
 
         <Route 
@@ -32,7 +33,16 @@ function Routes() {
               <Hero />
             </Suspense>
           } 
+        />,
+        <Route 
+          path='/auth' 
+          element={
+            <Suspense fallback={<LoadingPage />}>
+              <AuthPage/>
+            </Suspense>
+          } 
         />
+
       </>
     )
   )

@@ -2,7 +2,7 @@ import UserContext from "./UserContext";
 import { useContext , useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-const UserContextProvider = ({children}) => {
+function UserContextProvider ({children}) {
     
     const [user , setUser] = useState( ()=> {
         const storedUser = sessionStorage.getItem('user');
@@ -25,7 +25,7 @@ const UserContextProvider = ({children}) => {
     )
 }
 
-function useUser() {
+export function useUser() {
     return useContext(UserContext);
 }
 
@@ -33,4 +33,4 @@ UserContextProvider.propTypes = {
     children: PropTypes.node.isRequired
 };
 
-export {UserContextProvider , useUser};
+export default UserContextProvider;

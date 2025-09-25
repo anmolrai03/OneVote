@@ -177,7 +177,7 @@ function Hero() {
         >
           <nav className="container mx-auto flex justify-between items-center px-4 md:px-8 w-full h-full">
             <Link
-              to=""
+              to="/"
               className="flex items-center p-2 transition-all duration-200 ease-in-out hover:bg-zinc-800/30 rounded-xl group"
               onClick={(e) => {
                 e.preventDefault();
@@ -242,7 +242,7 @@ function Hero() {
 
             <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
               <Link
-                to="/registeration"
+                to="/auth"
                 className="px-5 py-3 md:px-8 md:py-4 rounded-xl bg-gradient-to-r from-teal-500 to-teal-600 text-white font-medium hover:scale-105 transition-all duration-300 group relative overflow-hidden text-sm md:text-base"
               >
                 <span className="relative z-10">Get Started</span>
